@@ -51,4 +51,4 @@ export const updateDelhiWeather = functions.firestore.document('cities-weather/D
 //       console.log('error: ',e)
 //       response.send('error')
 //   })
-});
+// });
