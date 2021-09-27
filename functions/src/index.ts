@@ -41,14 +41,14 @@ export const updateDelhiWeather = functions.firestore.document('cities-weather/D
     return admin.messaging().sendToTopic('cities-weather/Delhi',payload);
 })
 
-export const getDelhiWeather = functions.https.onRequest((request, response) => {
-  admin.firestore().doc('cities-weather/Delhi').get()
-  .then(snapshot=>{
-    const data = snapshot.data()
-    response.send(data)
-  })
-  .catch(e=> {
-      console.log('error: ',e)
-      response.send('error')
-  })
+// export const getDelhiWeather = functions.https.onRequest((request, response) => {
+//   admin.firestore().doc('cities-weather/Delhi').get()
+//   .then(snapshot=>{
+//     const data = snapshot.data()
+//     response.send(data)
+//   })
+//   .catch(e=> {
+//       console.log('error: ',e)
+//       response.send('error')
+//   })
 });
