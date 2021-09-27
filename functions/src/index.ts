@@ -27,7 +27,7 @@ export const getCitiesWeather = functions.https.onRequest((req,res)=>{
     })
     .catch(e=>{
         console.log(e)
-        response.send('error',e)
+        res.send('error',e)
     })
 })
 
