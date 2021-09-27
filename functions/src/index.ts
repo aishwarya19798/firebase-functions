@@ -27,7 +27,7 @@ export const getCitiesWeather = functions.https.onRequest((req,res)=>{
     })
     .catch(e=>{
         console.log(e)
-        res.send('error',e)
+        res.send('error')
     })
 })
 
@@ -50,6 +50,6 @@ export const getDelhiWeather = functions.https.onRequest((request, response) => 
   })
   .catch(e=> {
       console.log('error: ',e)
-      response.send('error',e)
+      response.send('error')
   })
 });
