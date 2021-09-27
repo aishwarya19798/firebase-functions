@@ -47,7 +47,7 @@ export const getDelhiWeather = functions.https.onRequest((request, response) => 
     const data = snapshot.data()
     response.send(data)
   })
-  .catch(e=>{
+  .catch(e=> {
       console.log('error: ',e)
       response.send('error')
   })
